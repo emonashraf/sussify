@@ -1,0 +1,105 @@
+/* ======================  Testimonial Start  ======================*/
+.testimonial {
+  position: relative;
+  margin-inline: auto;
+  --icon-size: clamp(2.188rem, 2.031rem + 0.781vw, 2.813rem);
+
+  &__card {
+    transition: 0.3s;
+    width: 100%;
+    border-radius: var(--b-radius-12);
+    overflow: hidden;
+    max-width: rem(420px);
+    margin-inline: auto;
+    background-color: hsl(var(--white)/ 0.04);
+    border: 1px solid hsl(var(--white)/ 0.06);
+    padding: clamp(0.75rem, 0.625rem + 0.625vw, 1.25rem);
+    transition: 0.3s;
+
+    &:hover {
+      border: 1px solid hsl(var(--white)/0.09);
+      box-shadow:  var(--box-shadow);
+    }
+  }
+
+  &__body {
+    width: 100%;
+    transition: 0.3s;
+    z-index: 2;
+    padding-bottom: clamp(1.563rem, 1.328rem + 1.172vw, 2.5rem);
+
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border-top: 1px solid hsl(var(--white)/ 0.1);
+    padding-top: clamp(0.75rem, 0.625rem + 0.625vw, 1.25rem);
+  }
+
+  &__thumb {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    font-size: 18px;
+    margin-top: rem(25px);
+  }
+
+
+  .swiper {
+    padding: rem(50px) rem(30px);
+
+    @include xl-screen {
+      padding: rem(30px) rem(20px);
+    }
+
+    @include md-screen {
+      padding: rem(20px) rem(10px);
+    }
+  }
+
+  .swiper-slide {
+    max-width: rem(420px);
+  }
+
+  .custom-btn {
+    background-color: hsl(var(--base)/0.5);
+
+    &:hover {
+      background-color: hsl(var(--base)) !important;
+    }
+
+  }
+
+  .custom-prev {
+    left: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+  }
+
+  .custom-next {
+    right: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+  }
+
+  .custom-btn.swiper-button-disabled {
+    background-color: hsl(var(--base) / 0.2) !important;
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* ======================  Testimonial End  ======================*/

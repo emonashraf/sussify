@@ -1,0 +1,75 @@
+/* ======================  Banner Start  ======================*/
+.banner {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(6.25rem, 5.156rem + 5.469vw, 10.625rem);
+  min-height: 100%;
+  overflow: hidden;
+
+  &__pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(to right, hsl(var(--white)/ 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--white)/ 0.1) 1px, transparent 1px);
+    background-size: clamp(2.5rem, 1.563rem + 4.688vw, 6.25rem) clamp(2.563rem, 1.625rem + 4.688vw, 6.313rem);
+    mask-image: radial-gradient(ellipse 60% 100% at 50% 0%, hsl(var(--black)) 60%, transparent 100%);
+  }
+
+  &__content {
+    max-width: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    align-items: center;
+
+  }
+  &__subtitle{
+    background-color: hsl(var(--white)/ 0.08);
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    margin-bottom: clamp(0.438rem, 0.313rem + 0.625vw, 0.938rem);
+  }
+
+  &__title {
+    margin-bottom: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+  }
+
+  &__desc {
+    max-width: 550px;
+    margin-inline: auto;
+    font-size: clamp(1rem, 0.969rem + 0.156vw, 1.125rem);
+  }
+
+  &__btns {
+    display: flex;
+    gap: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+    margin-top: clamp(1.25rem, 1.094rem + 0.781vw, 1.875rem);
+    flex-wrap: wrap;
+  }
+
+  &__info-item {
+    position: relative;
+
+    &::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-right: 8px;
+    }
+  }
+}

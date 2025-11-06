@@ -1,0 +1,110 @@
+/* ======================  Pricing Start  ======================*/
+.pricing {
+    position: relative;
+    z-index: 1;
+
+    &__card {
+        padding-block: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
+        padding-inline: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+        background-color: hsl(var(--white)/ 0.04);
+        border: 1px solid hsl(var(--white)/ 0.06);
+        border-radius: var(--b-radius-20);
+        position: relative;
+        overflow: hidden;
+        max-width: rem(420px);
+        margin-inline: auto;
+        z-index: 1;
+        backdrop-filter: blur(10px);
+
+        &:hover,
+        &.active {
+            border-color: hsl(var(--white)/ 0.15);
+            .btn {
+                background-color: hsl(var(--base)) !important;
+                color: hsl(var(--white)) !important;
+                border-color: hsl(var(--base));
+            }
+        }
+        .popular-card {
+            background-color: hsl(var(--base));
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0 var(--b-radius-12) 0 var(--b-radius-12);
+            color: hsl(var(--heading-color));
+            font-weight: 700;
+
+        }
+
+    }
+
+    &__top {
+        border-bottom: 1px solid hsl(var(--white)/ 0.13);
+        margin-bottom: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
+        padding-bottom: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
+    }
+
+    &__icon {
+        font-size: 40px;
+        color: hsl(var(--base));
+        line-height: 1;
+        margin-bottom: clamp(1rem, 0.875rem + 0.625vw, 1.5rem);
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        background: linear-gradient(180deg, hsl(var(--base-two)), transparent);
+    }
+
+    &__name {
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+    &__price {
+        font-size: clamp(1.75rem, 1.438rem + 1.563vw, 3rem);
+        margin-bottom: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+
+        span {
+            font-size: rem(16px);
+            font-weight: 400;
+        }
+    }
+    &__list {
+        margin-top: clamp(1.25rem, 1.063rem + 0.938vw, 2rem);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.75rem, 0.563rem + 0.938vw, 1.5rem);
+
+        li {
+            position: relative;
+            padding-left: 25px;
+
+
+            &::before {
+                position: absolute;
+                left: 4px;
+                top: 4px;
+                content: "\f00c";
+                font-family: "font Awesome 6 Free";
+                font-size: 10px;
+                font-weight: 900;
+                margin-right: 8px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 3px;
+                width: 16px;
+                height: 16px;
+                border: 1px solid hsl(var(--border-color));
+                border-radius: 50%;
+            }
+        }
+    }
+    .btn{
+         margin-top: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+    }
+}
+
+/* ======================  Pricing End  ======================*/
