@@ -42,12 +42,14 @@ label.required:after {
 .form-control {
   font-weight: 400;
   outline: none;
+  height: auto;
   width: 100%;
-  padding: var(--common-p);
+  padding: var(--common-p) !important;
   border-radius: var(--common-radius);
   background-color: hsl(var(--white)/ 0.04) !important;
   border: 1px solid hsl(var(--white)/ 0.12);
   color: hsl(var(--body-color)) !important;
+  font-size: var(--common-f-size);
   line-height: 1.5;
   backdrop-filter: blur(10px);
 
@@ -137,12 +139,12 @@ select:-webkit-autofill {
 }
 
 .password__input input {
-  padding-right: 40px !important;
+  padding-right: 42px !important;
 }
 
 .password-show-hide {
   position: absolute;
-  right: 12px;
+  right: 16px;
   z-index: 3;
   cursor: pointer;
   top: 50%;
@@ -167,7 +169,6 @@ input[type='number'] {
 /* Custom Checkbox Design */
 .form-check {
   display: flex;
-  align-items: center;
   gap: 8px;
   margin-bottom: 0;
   padding-left: 0;
@@ -218,6 +219,7 @@ input[type='number'] {
     user-select: none;
     line-height: 1;
     color: hsl(var(--heading-color));
+    text-align: start;
   }
 }
 
@@ -350,12 +352,14 @@ input[type='number'] {
   border-radius: var(--common-radius);
   border: 1px solid hsl(var(--white) / 0.12);
   backdrop-filter: blur(10px);
+
   &> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: hsl(var(--white)/0.04);
   }
+
 
   .form-control {
     border-width: 0px !important;
@@ -369,10 +373,11 @@ input[type='number'] {
 
   .input-group-text+.form-control {
     padding-right: 20px;
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
-  .btn{
-    &:focus{
+
+  .btn {
+    &:focus {
       border: none !important;
     }
   }
@@ -382,10 +387,9 @@ input[type='number'] {
   }
 
   .input-group-text {
-    padding: 13px;
     padding-right: 0;
-    border-width: 0px;
-    border-radius: 8px;
+    border-width: 0px !important;
+    border-radius: var(--common-radius);
     background-color: hsl(var(--white)/ 0.04);
     color: hsl(var(--white));
   }

@@ -11,11 +11,9 @@
         position: relative;
         background-color: hsl(var(--white)/0.03);
         padding-inline: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
-        padding-bottom: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
+        padding-block: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
         border: 1px solid hsl(var(--white)/ 0.08);
         border-radius: var(--b-radius-12);
-        margin: 10px;
-
     }
 
     &__header {

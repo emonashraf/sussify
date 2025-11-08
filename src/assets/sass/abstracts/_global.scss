@@ -257,6 +257,16 @@
   background-size: clamp(1.563rem, 1.016rem + 2.734vw, 3.75rem) clamp(1.563rem, 1.016rem + 2.734vw, 3.75rem);
   mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, hsl(var(--black)) 30%, transparent 70%);
 }
+.common__pattern-2{
+  position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(to right, hsl(var(--white)/ 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--white)/ 0.1) 1px, transparent 1px);
+    background-size: clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem) clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem);
+    mask-image: radial-gradient(ellipse 40% 80% at 50% 0%, hsl(var(--black)) 60%, transparent 100%);
+}
 
 /* ======================  patter-1 End  ======================*/
 
