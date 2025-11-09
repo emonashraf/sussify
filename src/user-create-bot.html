@@ -86,64 +86,66 @@
     <input type="text" class="form-control" placeholder="Search">
     <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
   </div>
-  <div class="dashboard__header__widgets">
-    <div class="dropdown">
-      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="notification__btn">
-          <i class="las la-bell"></i>
-          <span class="notification__count">
-            <span>21</span>
+  <div class="dashboard__header__widgets-wrap">
+    <div class="dashboard__header__widgets">
+      <div class="dropdown">
+        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="notification__btn">
+            <i class="las la-bell"></i>
+            <span class="notification__count">
+              <span>21</span>
+            </span>
           </span>
-        </span>
-      </button>
-      <div class="dropdown-menu">
-        <div class="notification__wrap">
-          <div class="notification__header">
-            <h4>Notifications</h4>
-            <span class="badge badge--base">12 Unread</span>
-          </div>
-          <div class="notification__body">
-            <a href="#">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <span>26 minutes ago</span>
-            </a>
-            <a href="#">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <span>26 minutes ago</span>
-            </a>
-            <a href="#">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <span>26 minutes ago</span>
-            </a>
-            <a href="#">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <span>26 minutes ago</span>
-            </a>
-            <a href="#">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <span>26 minutes ago</span>
-            </a>
-          </div>
-          <div class="notification__footer">
-            <a href="#" class="btn btn--sm btn--base w-100">View all</a>
+        </button>
+        <div class="dropdown-menu">
+          <div class="notification__wrap">
+            <div class="notification__header">
+              <h4>Notifications</h4>
+              <span class="badge badge--base">12 Unread</span>
+            </div>
+            <div class="notification__body">
+              <a href="#">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <span>26 minutes ago</span>
+              </a>
+              <a href="#">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <span>26 minutes ago</span>
+              </a>
+              <a href="#">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <span>26 minutes ago</span>
+              </a>
+              <a href="#">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <span>26 minutes ago</span>
+              </a>
+              <a href="#">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <span>26 minutes ago</span>
+              </a>
+            </div>
+            <div class="notification__footer">
+              <a href="#" class="btn btn--sm btn--base w-100">View all</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        <span class="profile__dropdown">
-          <img src="assets/images/user.jpg" alt="image">
-          <span>Max Sujak</span>
-        </span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="user-profile-setting.html">Profile Setting</a></li>
-        <li><a class="dropdown-item" href="user-change-password.html">Change Password</a></li>
-        <li><a class="dropdown-item" href="two-factor.html">2FA Security</a></li>
-        <li><a class="dropdown-item" href="index.html">Logout</a></li>
-      </ul>
+      <div class="dropdown">
+        <button class="dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <span class="profile__dropdown">
+            <img src="assets/images/user.jpg" alt="image">
+            <span>Max Sujak</span>
+          </span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="user-profile-setting.html">Profile Setting</a></li>
+          <li><a class="dropdown-item" href="user-change-password.html">Change Password</a></li>
+          <li><a class="dropdown-item" href="two-factor.html">2FA Security</a></li>
+          <li><a class="dropdown-item" href="index.html">Logout</a></li>
+        </ul>
+      </div>
     </div>
     <span class="sidebar__open"><i class="fa-solid fa-bars"></i></span>
   </div>
@@ -163,7 +165,7 @@
                     </div>
                     <div class="col-sm-6">
                       <label class="form-label">Select Exchange</label>
-                      <select id="country" name="country" class="form-control  select-2" required>
+                      <select id="country" name="country" class="form-control  select2" required>
                         <option value="">Chat Gpt</option>
                         <option value="deepseek">DeepSeek</option>
                         <option value="cloud">Cloud</option>
@@ -174,7 +176,7 @@
                     </div>
                     <div class="col-sm-6">
                       <label class="form-label">Select Trading Pair</label>
-                      <select id="country" name="country" class="form-control  select-2" required>
+                      <select id="country" name="country" class="form-control  select2" required>
                         <option value="">BTC/USDT</option>
                         <option value="BTCUSDT">BTC/USDT</option>
                         <option value="ETHUSDT">ETH/USDT</option>
@@ -189,7 +191,7 @@
                     </div>
                     <div class="col-sm-6">
                       <label class="form-label">Strategy Type</label>
-                      <select id="country" name="country" class="form-control  select-2" required>
+                      <select id="country" name="country" class="form-control  select2" required>
                         <option value="">Scalping (AI)</option>
                         <option value="scalping-ai">Scalping (AI)</option>
                         <option value="swing-ai">Swing Trading (AI)</option>
@@ -215,7 +217,7 @@
                     </div>
                     <div class="col-sm-6">
                       <label class="form-label">Max Concurrent Trades</label>
-                      <select id="country" name="country" class="form-control  select-2" required>
+                      <select id="country" name="country" class="form-control  select2" required>
                         <option value="">Heigh</option>
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
@@ -227,7 +229,7 @@
                     </div>
                     <div class="col-sm-6">
                       <label class="form-label">Funding Source</label>
-                      <select id="country" name="country" class="form-control  select-2" required>
+                      <select id="country" name="country" class="form-control  select2" required>
                         <option value="">BTC/USDT</option>
                         <option value="BTCUSDT">BTC/USDT</option>
                         <option value="ETHUSDT">ETH/USDT</option>
@@ -263,7 +265,7 @@
 </div>
 <!--==========================  Dashboard Section End  ==========================-->
 <!-- Modal -->
-<div class="modal custom--modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+<div class="modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

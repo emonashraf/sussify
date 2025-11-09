@@ -20,7 +20,7 @@
   .page-item {
     &.active {
       .page-link {
-        background: linear-gradient(180deg, hsl(var(--base)), transparent) !important;
+        background: hsl(var(--base));
         color: hsl(var(--white));
 
       }

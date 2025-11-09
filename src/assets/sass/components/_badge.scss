@@ -13,8 +13,8 @@
   }
 
   &--base {
-    background-color: hsl(var(--base) / 0.15) !important;
-    color: hsl(var(--base)) !important;
+    background-color: hsl(var(--base) / 0.3) !important;
+    color: hsl(var(--base-l-400)) !important;
   }
 
   &--primary {

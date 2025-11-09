@@ -15,7 +15,7 @@
 
 .btn {
   color: hsl(var(--white)) !important;
-  font-size: 14px;
+  font-size: var(--common-f-size);
   font-weight: 700;
   padding: var(--common-p);
   border-radius: rem(50px);
@@ -29,6 +29,7 @@
   justify-content: center;
   transition: 0.3s;
   align-items: center;
+  white-space: nowrap;
 
 
   i {
@@ -60,10 +61,8 @@
   }
 
   &--sm {
-    padding: var(--common-p-sm);
-    font-weight: 600;
-    font-size: rem(14px);
-    border-radius: var(--b-radius-6);
+    padding: var(--common-p-sm) !important;
+    font-weight: 400;
   }
 
   &--icon {

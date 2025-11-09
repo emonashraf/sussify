@@ -55,12 +55,13 @@
           left: 0;
           transition: .3s;
           overflow: hidden;
-          box-shadow: 0px 0px 15px 0px hsl(var(--black) / .05);
-          border-color: hsl(var(--white) / .05);
+          box-shadow: var(--box-shadow);
+          border-color: hsl(var(--white) / .06);
           border-radius: 7px;
           min-width: 200px;
           margin-top: 0 !important;
-          background-color: hsl(var(--base-two));
+          background-color: hsl(var(--black));
+          padding-inline: 6px;
 
           &-end {
                left: auto;
@@ -101,8 +102,8 @@
                &:active,
                &:focus,
                &:hover {
-                    color: hsl(var(--base-l-300)) !important;
-                    background-color: hsl(var(--white)/ 0.05);
+                    color: hsl(var(--white)) !important;
+                    background-color: hsl(var(--base));
                }
           }
      }

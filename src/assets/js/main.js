@@ -175,9 +175,11 @@
 
   // ========================= Select2 Js Start =====================
   if ($('.select2').length) {
-    $('.select2').select2();
+    $('.select2').select2({
+      width: '100%'
+    });
   }
-  
+
   // ========================= Select2 Js End =====================
 
 
@@ -205,25 +207,25 @@
   //============================ Sidebar Js End ==============================
 
   $(window).on("scroll", function () {
-  const windowHeight = $(window).height();
-  const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    const scrollTop = $(window).scrollTop();
 
-  $(".ss-demo").each(function () {
-    const $section = $(this);
-    const elementTop = $section.offset().top;
-    const elementHeight = $section.outerHeight();
+    $(".ss-demo").each(function () {
+      const $section = $(this);
+      const elementTop = $section.offset().top;
+      const elementHeight = $section.outerHeight();
 
-    // Section comes into view
-    if (
-      scrollTop + windowHeight > elementTop + elementHeight * 0.3 &&
-      scrollTop < elementTop + elementHeight * 0.9
-    ) {
-      $section.addClass("active");
-    } else {
-      $section.removeClass("active");
-    }
+      // Section comes into view
+      if (
+        scrollTop + windowHeight > elementTop + elementHeight * 0.3 &&
+        scrollTop < elementTop + elementHeight * 0.9
+      ) {
+        $section.addClass("active");
+      } else {
+        $section.removeClass("active");
+      }
+    });
   });
-});
 
 
   // ========================= Scroll Reveal Js Start ===================
@@ -234,32 +236,30 @@
     delay: 100,
     reset: false,
   })
-  sr.reveal('.bottom-reveal,  .section-heading__title, .pricing', {
+  sr.reveal('.bottom-reveal, .banner__info-item:nth-child(2), .section-heading__title, .pricing', {
     delay: 60,
     interval: 100,
     origin: 'bottom',
   })
-  sr.reveal('.banner__desc, .section-heading__desc, .testimonial, .blog__card', {
-    delay: 150,
-    interval: 100,
+  sr.reveal('.section-heading__desc, .features__card, .testimonial__card, .pricing__card, .blog__card', {
+    delay: 100,
+    interval: 200,
     origin: 'bottom',
   })
-  sr.reveal('.banner__btns', {
-    delay: 200,
-    origin: 'bottom',
-  })
-  sr.reveal('.right-reveal, .faq__thumb-wrap', {
+  sr.reveal('.right-reveal, .banner__desc, .banner__info-item:nth-child(3)', {
     delay: 60,
     origin: 'right',
+     interval: 200,
   })
-  sr.reveal('.left-reveal, .faq__content-wrap', {
+  sr.reveal('.left-reveal, .banner__title, .banner__info-item:nth-child(1)', {
     delay: 60,
-    interval: 100,
+    interval: 200,
     origin: 'left',
   })
-  sr.reveal('.banner__subtitle, .section-heading__name', {
+  sr.reveal('.banner__subtitle, .section-heading__name, .work-process__card', {
     delay: 60,
     origin: 'top',
+    interval: 150,
   })
 
 

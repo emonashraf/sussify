@@ -1,31 +1,11 @@
 /* ============= Footer Start Here ======================= */
 .footer {
   position: relative;
-  background-color: hsl(var(--black)/ 0.85);
+  background-color: hsl(var(--white)/ 0.04);
   color: hsl(var(--white));
   margin-top: auto;
   z-index: 2;
   overflow: hidden;
-  background: linear-gradient(180deg, hsl(var(--base-two)) 0%, transparent 59.04%);
-
-  &__shape {
-    position: absolute;
-    max-width: clamp(9.375rem, 7.344rem + 10.156vw, 17.5rem);
-    z-index: -1;
-
-    &:nth-child(1) {
-      top: -5%;
-      left: -3%;
-      animation: rotateIn 90s linear infinite;
-    }
-
-    &:nth-child(2) {
-      right: -2%;
-      bottom: -10%;
-      animation: rotateOut 90s linear infinite;
-    }
-
-  }
 
   &__bg_top {
     position: absolute;
@@ -52,20 +32,9 @@
     gap: clamp(1.875rem, 1.563rem + 1.563vw, 3.125rem) clamp(0.625rem, 0rem + 3.125vw, 3.125rem);
   }
 
-  &__item_right {
-    padding-top: rem(120px);
-
-    @include lg-screen {
-      padding-top: rem(60px);
-    }
-
-    @include sm-screen {
-      padding-top: 40px;
-    }
-  }
 
   &__first-item {
-    max-width: rem(350px);
+    max-width: rem(450px);
 
     @include lg-screen {
       display: flex;
@@ -153,11 +122,14 @@
       font-weight: 900;
       display: inline-block;
       margin-right: 8px;
-      color: hsl(var(--base));
+      color: hsl(var(--white));
     }
 
     &:last-child {
       padding-bottom: 0;
+    }
+    &:hover {
+      color: hsl(var(--base-l-300));
     }
   }
 
@@ -169,9 +141,7 @@
     gap: rem(12px);
     font-size: clamp(0.75rem, 0.719rem + 0.156vw, 0.875rem);
 
-    &:hover {
-      color: hsl(var(--base));
-    }
+    
 
     i {
       color: hsl(var(--base));
@@ -194,8 +164,8 @@
       color: hsl(var(--base));
 
       ~button {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         padding: 0;
         background-color: hsl(var(--base));
         border-radius: 50% !important;

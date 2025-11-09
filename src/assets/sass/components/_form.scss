@@ -44,9 +44,9 @@ label.required:after {
   outline: none;
   height: auto;
   width: 100%;
-  padding: var(--common-p) !important;
+  padding: var(--common-p);
   border-radius: var(--common-radius);
-  background-color: hsl(var(--white)/ 0.04) !important;
+  background-color: hsl(var(--white)/ 0.04);
   border: 1px solid hsl(var(--white)/ 0.12);
   color: hsl(var(--body-color)) !important;
   font-size: var(--common-f-size);
@@ -65,7 +65,7 @@ label.required:after {
 
   &:disabled,
   &[readonly] {
-    background-color: hsl(var(--white) / 0.2);
+    background-color: hsl(var(--white) / 0.08);
     opacity: 1;
     border: 0;
   }
@@ -97,6 +97,11 @@ label.required:after {
         color: hsl(var(--black));
       }
     }
+  }
+
+  &-sm {
+    padding: var(--common-p-sm) !important;
+    font-size: rem(14px);
   }
 }
 
@@ -351,13 +356,13 @@ input[type='number'] {
 .input-group {
   border-radius: var(--common-radius);
   border: 1px solid hsl(var(--white) / 0.12);
+  background-color: hsl(var(--white)/ 0.04);
   backdrop-filter: blur(10px);
 
   &> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background-color: hsl(var(--white)/0.04);
   }
 
 
@@ -365,6 +370,8 @@ input[type='number'] {
     border-width: 0px !important;
     padding-right: 0;
     box-shadow: unset;
+    background-color: transparent !important;
+    backdrop-filter: unset !important;
 
     &:focus {
       border: none !important;
@@ -375,6 +382,8 @@ input[type='number'] {
     padding-right: 20px;
     padding-left: 10px !important;
   }
+  
+ 
 
   .btn {
     &:focus {
@@ -390,8 +399,11 @@ input[type='number'] {
     padding-right: 0;
     border-width: 0px !important;
     border-radius: var(--common-radius);
-    background-color: hsl(var(--white)/ 0.04);
+    background-color: transparent;
     color: hsl(var(--white));
+  }
+   .form-control+.input-group-text{
+    padding-right: 20px;
   }
 
   .form-control[readonly] {
